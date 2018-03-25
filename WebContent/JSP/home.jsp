@@ -10,7 +10,7 @@
 	olá mundo!
 	<h1><%= request.getAttribute("nome") %></h1>
 	
-	<% if (request.getParameter("email").length() > 0) { %>
+	<% if (request.getParameterMap().containsKey("email") && !request.getParameter("email").isEmpty()) { %>
 	<h2><%= request.getParameter("email") %></h2>
 	<% } %>
 	
